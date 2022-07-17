@@ -11149,3 +11149,338 @@ Processing by GitusersController#index as HTML
 Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 2110)
 
 
+Started GET "/" for 127.0.0.1 at 2022-07-17 21:15:15 +0300
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GitusersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gitusers/index.html.erb within layouts/application
+  Rendered gitusers/index.html.erb within layouts/application (Duration: 55.9ms | Allocations: 8649)
+  Rendered layout layouts/application.html.erb (Duration: 636.4ms | Allocations: 69191)
+Completed 500 Internal Server Error in 735ms (ActiveRecord: 0.9ms | Allocations: 79183)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_file_s_rename - (D:/study/testgithubrepsnames/tmp/cache/assets/sprockets/v4.0.0/sW/sW3a0L107n98vutSsvc_oIlI2NGxgHqzKn-IMOyY2ys.cache.23360.13664.352732, D:/study/testgithubrepsnames/tmp/cache/assets/sprockets/v4.0.0/sW/sW3a0L107n98vutSsvc_oIlI2NGxgHqzKn-IMOyY2ys.cache)):
+  
+sprockets (4.1.1) lib/sprockets/path_utils.rb:362:in `rename'
+sprockets (4.1.1) lib/sprockets/path_utils.rb:362:in `atomic_write'
+sprockets (4.1.1) lib/sprockets/cache/file_store.rb:112:in `set'
+sprockets (4.1.1) lib/sprockets/cache.rb:227:in `set'
+sprockets (4.1.1) lib/sprockets/cache.rb:143:in `set'
+sprockets (4.1.1) lib/sprockets/loader.rb:266:in `store_asset'
+sprockets (4.1.1) lib/sprockets/loader.rb:226:in `load_from_unloaded'
+sprockets (4.1.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.1.1) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.1.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.1.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+sprockets (4.1.1) lib/sprockets/cached_environment.rb:44:in `fetch'
+sprockets (4.1.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.1.1) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.1.1) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.1.1) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.1.1) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.1.1) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `block in synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2022-07-17 21:15:24 +0300
+Processing by GitusersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gitusers/index.html.erb within layouts/application
+  Rendered gitusers/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 4523)
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 28508)
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.0ms | Allocations: 28905)
+
+
+Started POST "/gitusers" for 127.0.0.1 at 2022-07-17 21:15:26 +0300
+Processing by GitusersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gituser"=>{"log"=>"Hauxenbro"}, "commit"=>"SEND USERNAME"}
+  [1m[36mGituser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/controllers/gitusers_controller.rb:43:in `create'
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:26 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\r\n  getuserName(log:\"Hauxenbro\")\r\n  {\r\n    log\r\n    name\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"{\r\n  getuserName(log:\"Hauxenbro\")\r\n  {\r\n    log\r\n    name\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mGituser Load (0.3ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ?[0m  [["log", "Hauxenbro"]]
+Completed 200 OK in 75ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 11182)
+
+
+  [1m[36mGituser Load (0.3ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/controllers/gitusers_controller.rb:48:in `create'
+  [1m[36mGitrep Delete All (135.4ms)[0m  [1m[31mDELETE FROM "gitreps" WHERE "gitreps"."gituser_id" = ?[0m  [["gituser_id", 1]]
+  ↳ app/controllers/gitusers_controller.rb:49:in `create'
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:27 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation{\r\n  createGituser(input:{log:\"Hauxenbro\", name:\"# No Name\"}){\r\n    gituser{\r\n      name\r\n    }\r\n  }\r\n}\r\n", "variables"=>{}, "graphql"=>{"query"=>"mutation{\r\n  createGituser(input:{log:\"Hauxenbro\", name:\"# No Name\"}){\r\n    gituser{\r\n      name\r\n    }\r\n  }\r\n}\r\n", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_gituser.rb:15:in `resolve'
+  [1m[36mGituser Create (1.0ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "Hauxenbro"], ["name", "# No Name"], ["created_at", "2022-07-17 18:15:27.770902"], ["updated_at", "2022-07-17 18:15:27.770902"]]
+  ↳ app/graphql/mutations/create_gituser.rb:15:in `resolve'
+  [1m[36mTRANSACTION (114.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_gituser.rb:15:in `resolve'
+Completed 200 OK in 128ms (Views: 0.2ms | ActiveRecord: 116.0ms | Allocations: 4222)
+
+
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:27 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"AvitoBackendTraineeTestCase\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"AvitoBackendTraineeTestCase\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mGituser Load (0.4ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/graphql/mutations/create_rep.rb:14:in `resolve'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mGitrep Create (1.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "AvitoBackendTraineeTestCase"], ["gituser_id", 1], ["created_at", "2022-07-17 18:15:28.073638"], ["updated_at", "2022-07-17 18:15:28.073638"]]
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mTRANSACTION (123.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+Completed 200 OK in 211ms (Views: 0.2ms | ActiveRecord: 124.7ms | Allocations: 9793)
+
+
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:28 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"bitbucketJunior\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"bitbucketJunior\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mGituser Load (0.2ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/graphql/mutations/create_rep.rb:14:in `resolve'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mGitrep Create (0.9ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "bitbucketJunior"], ["gituser_id", 1], ["created_at", "2022-07-17 18:15:28.318975"], ["updated_at", "2022-07-17 18:15:28.318975"]]
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mTRANSACTION (97.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+Completed 200 OK in 111ms (Views: 0.2ms | ActiveRecord: 99.0ms | Allocations: 3610)
+
+
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:28 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"converter_with_api_privat24_ukraine\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"converter_with_api_privat24_ukraine\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mGituser Load (0.2ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/graphql/mutations/create_rep.rb:14:in `resolve'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mGitrep Create (1.0ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "converter_with_api_privat24_ukraine"], ["gituser_id", 1], ["created_at", "2022-07-17 18:15:28.534397"], ["updated_at", "2022-07-17 18:15:28.534397"]]
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mTRANSACTION (128.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+Completed 200 OK in 143ms (Views: 0.2ms | ActiveRecord: 130.1ms | Allocations: 3327)
+
+
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:28 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"CPU-RAM-load-monitor\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"CPU-RAM-load-monitor\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mGituser Load (0.3ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/graphql/mutations/create_rep.rb:14:in `resolve'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mGitrep Create (1.2ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "CPU-RAM-load-monitor"], ["gituser_id", 1], ["created_at", "2022-07-17 18:15:28.783915"], ["updated_at", "2022-07-17 18:15:28.783915"]]
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mTRANSACTION (138.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+Completed 200 OK in 155ms (Views: 0.3ms | ActiveRecord: 140.2ms | Allocations: 3326)
+
+
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:28 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"DICES_on_python\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"DICES_on_python\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mGituser Load (0.2ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/graphql/mutations/create_rep.rb:14:in `resolve'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mGitrep Create (1.0ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "DICES_on_python"], ["gituser_id", 1], ["created_at", "2022-07-17 18:15:29.084072"], ["updated_at", "2022-07-17 18:15:29.084072"]]
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mTRANSACTION (120.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+Completed 200 OK in 133ms (Views: 0.2ms | ActiveRecord: 121.6ms | Allocations: 3326)
+
+
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:29 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"Faifly-TestCase\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"Faifly-TestCase\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mGituser Load (0.2ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/graphql/mutations/create_rep.rb:14:in `resolve'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mGitrep Create (1.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Faifly-TestCase"], ["gituser_id", 1], ["created_at", "2022-07-17 18:15:29.322167"], ["updated_at", "2022-07-17 18:15:29.322167"]]
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mTRANSACTION (101.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+Completed 200 OK in 114ms (Views: 0.2ms | ActiveRecord: 102.4ms | Allocations: 3277)
+
+
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:29 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"Guessing-game\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"Guessing-game\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mGituser Load (0.2ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/graphql/mutations/create_rep.rb:14:in `resolve'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mGitrep Create (1.0ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Guessing-game"], ["gituser_id", 1], ["created_at", "2022-07-17 18:15:29.535832"], ["updated_at", "2022-07-17 18:15:29.535832"]]
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mTRANSACTION (135.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+Completed 200 OK in 150ms (Views: 0.3ms | ActiveRecord: 136.5ms | Allocations: 3326)
+
+
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:29 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"insta-parser\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"insta-parser\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mGituser Load (0.2ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/graphql/mutations/create_rep.rb:14:in `resolve'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mGitrep Create (0.9ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "insta-parser"], ["gituser_id", 1], ["created_at", "2022-07-17 18:15:29.819652"], ["updated_at", "2022-07-17 18:15:29.819652"]]
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mTRANSACTION (104.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+Completed 200 OK in 119ms (Views: 0.3ms | ActiveRecord: 105.2ms | Allocations: 3326)
+
+
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:29 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"KazanExpressTest-for-junior\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"KazanExpressTest-for-junior\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mGituser Load (0.2ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/graphql/mutations/create_rep.rb:14:in `resolve'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mGitrep Create (0.9ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "KazanExpressTest-for-junior"], ["gituser_id", 1], ["created_at", "2022-07-17 18:15:30.051423"], ["updated_at", "2022-07-17 18:15:30.051423"]]
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mTRANSACTION (137.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+Completed 200 OK in 152ms (Views: 0.3ms | ActiveRecord: 138.5ms | Allocations: 3326)
+
+
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:30 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"korrespondent-parser\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"korrespondent-parser\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mGituser Load (0.4ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/graphql/mutations/create_rep.rb:14:in `resolve'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mGitrep Create (1.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "korrespondent-parser"], ["gituser_id", 1], ["created_at", "2022-07-17 18:15:30.317965"], ["updated_at", "2022-07-17 18:15:30.317965"]]
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mTRANSACTION (136.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+Completed 200 OK in 152ms (Views: 0.4ms | ActiveRecord: 137.4ms | Allocations: 3330)
+
+
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:30 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"MediaSoftTestCase\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"MediaSoftTestCase\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mGituser Load (0.2ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/graphql/mutations/create_rep.rb:14:in `resolve'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mGitrep Create (1.0ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "MediaSoftTestCase"], ["gituser_id", 1], ["created_at", "2022-07-17 18:15:30.588184"], ["updated_at", "2022-07-17 18:15:30.588184"]]
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mTRANSACTION (125.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+Completed 200 OK in 140ms (Views: 0.8ms | ActiveRecord: 126.2ms | Allocations: 3326)
+
+
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:30 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"pharmaproj\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"pharmaproj\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mGituser Load (0.2ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/graphql/mutations/create_rep.rb:14:in `resolve'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mGitrep Create (1.0ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "pharmaproj"], ["gituser_id", 1], ["created_at", "2022-07-17 18:15:30.864585"], ["updated_at", "2022-07-17 18:15:30.864585"]]
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mTRANSACTION (122.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+Completed 200 OK in 137ms (Views: 0.3ms | ActiveRecord: 123.9ms | Allocations: 3326)
+
+
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:31 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"Site-on-django\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"Site-on-django\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mGituser Load (0.2ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/graphql/mutations/create_rep.rb:14:in `resolve'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mGitrep Create (0.9ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Site-on-django"], ["gituser_id", 1], ["created_at", "2022-07-17 18:15:31.127583"], ["updated_at", "2022-07-17 18:15:31.127583"]]
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mTRANSACTION (117.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+Completed 200 OK in 130ms (Views: 0.2ms | ActiveRecord: 118.7ms | Allocations: 3276)
+
+
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:31 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"TestCase\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"TestCase\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mGituser Load (0.2ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/graphql/mutations/create_rep.rb:14:in `resolve'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mGitrep Create (0.9ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "TestCase"], ["gituser_id", 1], ["created_at", "2022-07-17 18:15:31.359171"], ["updated_at", "2022-07-17 18:15:31.359171"]]
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mTRANSACTION (81.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+Completed 200 OK in 94ms (Views: 0.2ms | ActiveRecord: 82.8ms | Allocations: 3326)
+
+
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:31 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"testgithubrepsnames\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"mutation{\r\n  createRep(input:{log:\"Hauxenbro\", name:\"testgithubrepsnames\"}){\r\n    repository{\r\n      name\r\n    }\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mGituser Load (0.2ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/graphql/mutations/create_rep.rb:14:in `resolve'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mGitrep Create (7.2ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "testgithubrepsnames"], ["gituser_id", 1], ["created_at", "2022-07-17 18:15:31.548571"], ["updated_at", "2022-07-17 18:15:31.548571"]]
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+  [1m[36mTRANSACTION (149.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/graphql/mutations/create_rep.rb:16:in `resolve'
+Completed 200 OK in 168ms (Views: 0.2ms | ActiveRecord: 156.8ms | Allocations: 3276)
+
+
+  [1m[36mGituser Load (0.2ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/controllers/gitusers_controller.rb:75:in `create'
+Redirected to http://127.0.0.1:3000/gitusers/1
+Completed 302 Found in 5155ms (ActiveRecord: 137.0ms | Allocations: 120495)
+
+
+Started GET "/gitusers/1" for 127.0.0.1 at 2022-07-17 21:15:31 +0300
+Processing by GitusersController#show as HTML
+  Parameters: {"id"=>"1"}
+Started POST "//graphql" for 127.0.0.1 at 2022-07-17 21:15:31 +0300
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\r\n  gitrepsName(log:\"Hauxenbro\"){\r\n    name\r\n  }\r\n}", "variables"=>{}, "graphql"=>{"query"=>"{\r\n  gitrepsName(log:\"Hauxenbro\"){\r\n    name\r\n  }\r\n}", "variables"=>{}}}
+Can't verify CSRF token authenticity.
+  [1m[36mGituser Load (0.2ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  ↳ app/graphql/types/query_type.rb:21:in `gitrepsName'
+  [1m[36mGitrep Load (0.3ms)[0m  [1m[34mSELECT "gitreps".* FROM "gitreps" WHERE "gitreps"."gituser_id" = ?[0m  [["gituser_id", 1]]
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 2406)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering gitusers/show.html.erb within layouts/application
+  Rendered gitusers/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 354)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 1821)
+Completed 200 OK in 108ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 6779)
+
+
