@@ -1,0 +1,9 @@
+<h1>Names and Repos</h1>
+<%= link_to "На главную", gitusers_path %>
+<p><%= @log %> : <%= @name %></p
+<caption>Репозитории <%= @log %></caption>
+<ul>
+<% @list.each do |x| %>
+  <li><%= x %></li>
+<% end %>
+</ul>
