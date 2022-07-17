@@ -7,16 +7,12 @@ class GitusersController < ApplicationController
     @gituser = Gituser.new
   end
 
-  def about
-
-  end
-
   def show
     @log = $log
     @name = $name
     @list = []
     # Параметры для запросов graph
-    url_gr = URI("https://testcasegitreps.herokuapp.com/graphql")
+    url_gr = URI("http://127.0.0.1:3000//graphql")
     http = Net::HTTP.new(url_gr.host, url_gr.port);
     request = Net::HTTP::Post.new(url_gr)
     request["Content-Type"] = "application/json"
@@ -39,7 +35,7 @@ class GitusersController < ApplicationController
     $name = JSON.parse(response)["name"] ? JSON.parse(response)["name"] : "# No Name"
 
     # параметры для запросов
-    url_gr = URI("https://testcasegitreps.herokuapp.com/graphql")
+    url_gr = URI("http://127.0.0.1:3000//graphql")
     http = Net::HTTP.new(url_gr.host, url_gr.port);
     request = Net::HTTP::Post.new(url_gr)
     request["Content-Type"] = "application/json"
