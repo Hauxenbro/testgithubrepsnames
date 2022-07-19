@@ -57,7 +57,7 @@ class GitusersController < ApplicationController
       name_ch = JSON.parse(response.read_body)['data']['getUserName'][0]['name']
       id = Gituser.find_by_log(@log).id
       Gitrep.where("gituser": id).delete_all
-      if @name != name_ch
+      if (@name != name_ch) && (@name != '# No Name')
         request.body = "{\"query\":\"mutation{\\r\\n  updateGituser(input:{id:\\\"#{id}\\\", attributes:{name:\\\"#{@name}\\\", log:\\\"#{@log}\\\"}}){\\r\\n    gituser{\\r\\n      name\\r\\n      log\\r\\n    }\\r\\n  }\\r\\n}\",\"variables\":{}}"
         http.request(request)
       end
@@ -72,8 +72,10 @@ class GitusersController < ApplicationController
       response = nil
     else
       # Запись юзера в БД нового, если у него есть репы
-      request.body = "{\"query\":\"mutation{\\r\\n  createGituser(input:{log:\\\"#{@log}\\\", name:\\\"#{@name}\\\"}){\\r\\n    gituser{\\r\\n      name\\r\\n    }\\r\\n  }\\r\\n}\\r\\n\",\"variables\":{}}"
-      http.request(request)
+      unless Gituser.exists?(log: @log)
+        request.body = "{\"query\":\"mutation{\\r\\n  createGituser(input:{log:\\\"#{@log}\\\", name:\\\"#{@name}\\\"}){\\r\\n    gituser{\\r\\n      name\\r\\n    }\\r\\n  }\\r\\n}\\r\\n\",\"variables\":{}}"
+        http.request(request)
+      end
       response.each do |x|
         request.body = "{\"query\":\"mutation{\\r\\n  createRep(input:{log:\\\"#{@log}\\\", name:\\\"#{x['name']}\\\"}){\\r\\n    repository{\\r\\n      name\\r\\n    }\\r\\n  }\\r\\n}\",\"variables\":{}}"
         http.request(request)
@@ -82,7 +84,11 @@ class GitusersController < ApplicationController
 
     if !response.nil?
       @user = Gituser.find_by_log(@log)
-      redirect_to @user
+      if @user.nil?
+        redirect_to gitusers_path, alert: 'Ошибка обработки. Пожалуйста, попробуйте ещё раз.'
+      else
+        redirect_to @user
+      end
     else
       redirect_to gitusers_path, alert: 'Ваш пользователь не зарегистрирован на github!'
     end
