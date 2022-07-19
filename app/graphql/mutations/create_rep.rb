@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module Mutations
+  # Mutation class for GRAPHQL which creates new rep in Gitrep table in DB
   class CreateRep < BaseMutation
     # TODO: define return fields
     # field :post, Types::PostType, null: false
@@ -24,7 +27,6 @@ module Mutations
           errors: repository.errors.full_messages
         }
       end
-
     end
   end
 end

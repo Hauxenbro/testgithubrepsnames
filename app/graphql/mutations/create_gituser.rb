@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module Mutations
+  # Mutation class for GRAPHQL which creates new user in Gituser table in DB
   class CreateGituser < BaseMutation
     # TODO: define return fields
     # field :post, Types::PostType, null: false

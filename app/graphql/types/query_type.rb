@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module Types
+  # Class for getting queries from DB by using GRAPHQL
   class QueryType < Types::BaseObject
     # Add `node(id: ID!) and `nodes(ids: [ID!]!)`
     include GraphQL::Types::Relay::HasNodeField
@@ -9,24 +12,31 @@ module Types
 
     # TODO: remove me
 
-    field :gitreps, [Types::GitrepType], null: false
-    def gitreps
+    field :git_reps, [Types::GitrepType], null: false
+    def git_reps
       Gitrep.all
     end
 
-    field :gitrepsName, [Types::GitrepType], null: false do
+    field :git_reps_name, [Types::GitrepType], null: false do
       argument :log, String, required: true
     end
-    def gitrepsName(log:)
+    def git_reps_name(log:)
       user = Gituser.find_by_log(log)
       Gitrep.where(gituser_id: user.id)
     end
 
-    field :getuserName, [Types::GituserType], null: false do
-      argument :log, String, required:true
+    field :get_user_name, [Types::GituserType], null: false do
+      argument :log, String, required: true
     end
-    def getuserName(log:)
+    def get_user_name(log:)
       Gituser.where(log: log)
+    end
+
+    field :get_user, [Types::GituserType], null: false do
+      argument :id, ID, required: true
+    end
+    def get_user(id:)
+      Gituser.where(id: id)
     end
   end
 end
