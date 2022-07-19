@@ -2672,3 +2672,343 @@ Processing by GitusersController#index as */*
   Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1132)
 Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 1520)
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (1.0ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "any"], ["created_at", "2022-07-19 19:48:35.874379"], ["updated_at", "2022-07-19 19:48:35.874379"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.9ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "any"], ["created_at", "2022-07-19 19:48:35.978267"], ["updated_at", "2022-07-19 19:48:35.978267"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.8ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "any"], ["created_at", "2022-07-19 19:48:35.982324"], ["updated_at", "2022-07-19 19:48:35.982324"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mGitrep Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gitreps"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.9ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "any"], ["created_at", "2022-07-19 19:48:35.988568"], ["updated_at", "2022-07-19 19:48:35.988568"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.2ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "any1"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:35.991347"], ["updated_at", "2022-07-19 19:48:35.991347"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "any2"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:35.992755"], ["updated_at", "2022-07-19 19:48:35.992755"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "any3"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:35.994177"], ["updated_at", "2022-07-19 19:48:35.994177"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "any4"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:35.995341"], ["updated_at", "2022-07-19 19:48:35.995341"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "any5"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:35.996533"], ["updated_at", "2022-07-19 19:48:35.996533"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "any6"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:35.997629"], ["updated_at", "2022-07-19 19:48:35.997629"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "any7"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:35.998846"], ["updated_at", "2022-07-19 19:48:35.998846"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "any8"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:35.999944"], ["updated_at", "2022-07-19 19:48:35.999944"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "any9"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.001058"], ["updated_at", "2022-07-19 19:48:36.001058"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "any10"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.002241"], ["updated_at", "2022-07-19 19:48:36.002241"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mGitrep Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gitreps"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.8ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.005154"], ["updated_at", "2022-07-19 19:48:36.005154"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.007148"], ["updated_at", "2022-07-19 19:48:36.007148"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any1"], ["name", "any1"], ["created_at", "2022-07-19 19:48:36.008343"], ["updated_at", "2022-07-19 19:48:36.008343"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.2ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "bla-bla-bla1"], ["gituser_id", 2], ["created_at", "2022-07-19 19:48:36.010115"], ["updated_at", "2022-07-19 19:48:36.010115"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "bla-bla-bla1"], ["gituser_id", 3], ["created_at", "2022-07-19 19:48:36.011559"], ["updated_at", "2022-07-19 19:48:36.011559"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "bla-bla-bla2"], ["gituser_id", 2], ["created_at", "2022-07-19 19:48:36.012777"], ["updated_at", "2022-07-19 19:48:36.012777"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "bla-bla-bla2"], ["gituser_id", 3], ["created_at", "2022-07-19 19:48:36.013896"], ["updated_at", "2022-07-19 19:48:36.013896"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "bla-bla-bla3"], ["gituser_id", 2], ["created_at", "2022-07-19 19:48:36.014955"], ["updated_at", "2022-07-19 19:48:36.014955"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "bla-bla-bla3"], ["gituser_id", 3], ["created_at", "2022-07-19 19:48:36.016031"], ["updated_at", "2022-07-19 19:48:36.016031"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "bla-bla-bla4"], ["gituser_id", 2], ["created_at", "2022-07-19 19:48:36.017201"], ["updated_at", "2022-07-19 19:48:36.017201"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "bla-bla-bla4"], ["gituser_id", 3], ["created_at", "2022-07-19 19:48:36.018609"], ["updated_at", "2022-07-19 19:48:36.018609"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "bla-bla-bla5"], ["gituser_id", 2], ["created_at", "2022-07-19 19:48:36.019847"], ["updated_at", "2022-07-19 19:48:36.019847"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "bla-bla-bla5"], ["gituser_id", 3], ["created_at", "2022-07-19 19:48:36.021040"], ["updated_at", "2022-07-19 19:48:36.021040"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mGitrep Count (4.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "gitreps" WHERE "gitreps"."gituser_id" = ?[0m  [["gituser_id", 2]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.9ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.028650"], ["updated_at", "2022-07-19 19:48:36.028650"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.2ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "repo_name1"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.031254"], ["updated_at", "2022-07-19 19:48:36.031254"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "repo_name2"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.032486"], ["updated_at", "2022-07-19 19:48:36.032486"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "repo_name3"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.033814"], ["updated_at", "2022-07-19 19:48:36.033814"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "repo_name4"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.034973"], ["updated_at", "2022-07-19 19:48:36.034973"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "repo_name5"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.036095"], ["updated_at", "2022-07-19 19:48:36.036095"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "repo_name6"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.037282"], ["updated_at", "2022-07-19 19:48:36.037282"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "repo_name7"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.038439"], ["updated_at", "2022-07-19 19:48:36.038439"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "repo_name8"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.039787"], ["updated_at", "2022-07-19 19:48:36.039787"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "repo_name9"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.041048"], ["updated_at", "2022-07-19 19:48:36.041048"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "repo_name10"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.042242"], ["updated_at", "2022-07-19 19:48:36.042242"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mGitrep Load (0.1ms)[0m  [1m[34mSELECT "gitreps".* FROM "gitreps" WHERE "gitreps"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.9ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.045528"], ["updated_at", "2022-07-19 19:48:36.045528"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.2ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "hello"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.047835"], ["updated_at", "2022-07-19 19:48:36.047835"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Update (0.7ms)[0m  [1m[33mUPDATE "gitreps" SET "name" = ?, "updated_at" = ? WHERE "gitreps"."id" = ?[0m  [["name", "hi"], ["updated_at", "2022-07-19 19:48:36.049094"], ["id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.8ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.052484"], ["updated_at", "2022-07-19 19:48:36.052484"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.2ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "name"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.054870"], ["updated_at", "2022-07-19 19:48:36.054870"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.2ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "name"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.056291"], ["updated_at", "2022-07-19 19:48:36.056291"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "name"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.058022"], ["updated_at", "2022-07-19 19:48:36.058022"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "name"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.059334"], ["updated_at", "2022-07-19 19:48:36.059334"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "name"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.060441"], ["updated_at", "2022-07-19 19:48:36.060441"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "name"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.061558"], ["updated_at", "2022-07-19 19:48:36.061558"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "name"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.062650"], ["updated_at", "2022-07-19 19:48:36.062650"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "name"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.063728"], ["updated_at", "2022-07-19 19:48:36.063728"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "name"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.064822"], ["updated_at", "2022-07-19 19:48:36.064822"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGitrep Create (0.1ms)[0m  [1m[32mINSERT INTO "gitreps" ("name", "gituser_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "name"], ["gituser_id", 1], ["created_at", "2022-07-19 19:48:36.066042"], ["updated_at", "2022-07-19 19:48:36.066042"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mGitrep Delete All (0.1ms)[0m  [1m[31mDELETE FROM "gitreps"[0m
+  [1m[36mGitrep Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gitreps"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (1.0ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "badboy"], ["created_at", "2022-07-19 19:48:36.086598"], ["updated_at", "2022-07-19 19:48:36.086598"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.2ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "badboy"], ["created_at", "2022-07-19 19:48:36.088691"], ["updated_at", "2022-07-19 19:48:36.088691"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "badboy"], ["created_at", "2022-07-19 19:48:36.090326"], ["updated_at", "2022-07-19 19:48:36.090326"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "badboy"], ["created_at", "2022-07-19 19:48:36.091408"], ["updated_at", "2022-07-19 19:48:36.091408"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "badboy"], ["created_at", "2022-07-19 19:48:36.092386"], ["updated_at", "2022-07-19 19:48:36.092386"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "badboy"], ["created_at", "2022-07-19 19:48:36.093765"], ["updated_at", "2022-07-19 19:48:36.093765"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "badboy"], ["created_at", "2022-07-19 19:48:36.094697"], ["updated_at", "2022-07-19 19:48:36.094697"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "badboy"], ["created_at", "2022-07-19 19:48:36.095616"], ["updated_at", "2022-07-19 19:48:36.095616"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "badboy"], ["created_at", "2022-07-19 19:48:36.096492"], ["updated_at", "2022-07-19 19:48:36.096492"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "badboy"], ["created_at", "2022-07-19 19:48:36.097769"], ["updated_at", "2022-07-19 19:48:36.097769"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mGituser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gitusers"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.9ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any1"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.101217"], ["updated_at", "2022-07-19 19:48:36.101217"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any2"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.103144"], ["updated_at", "2022-07-19 19:48:36.103144"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any3"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.104090"], ["updated_at", "2022-07-19 19:48:36.104090"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.2ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any4"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.105529"], ["updated_at", "2022-07-19 19:48:36.105529"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any5"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.107005"], ["updated_at", "2022-07-19 19:48:36.107005"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any6"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.108084"], ["updated_at", "2022-07-19 19:48:36.108084"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any7"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.109033"], ["updated_at", "2022-07-19 19:48:36.109033"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any8"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.109988"], ["updated_at", "2022-07-19 19:48:36.109988"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any9"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.111358"], ["updated_at", "2022-07-19 19:48:36.111358"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any10"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.112262"], ["updated_at", "2022-07-19 19:48:36.112262"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mGituser Load (0.1ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "any1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.9ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any1"], ["name", "any1"], ["created_at", "2022-07-19 19:48:36.115588"], ["updated_at", "2022-07-19 19:48:36.115588"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any2"], ["name", "any2"], ["created_at", "2022-07-19 19:48:36.117872"], ["updated_at", "2022-07-19 19:48:36.117872"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any3"], ["name", "any3"], ["created_at", "2022-07-19 19:48:36.118913"], ["updated_at", "2022-07-19 19:48:36.118913"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any4"], ["name", "any4"], ["created_at", "2022-07-19 19:48:36.119883"], ["updated_at", "2022-07-19 19:48:36.119883"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any5"], ["name", "any5"], ["created_at", "2022-07-19 19:48:36.120859"], ["updated_at", "2022-07-19 19:48:36.120859"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any6"], ["name", "any6"], ["created_at", "2022-07-19 19:48:36.122073"], ["updated_at", "2022-07-19 19:48:36.122073"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any7"], ["name", "any7"], ["created_at", "2022-07-19 19:48:36.123819"], ["updated_at", "2022-07-19 19:48:36.123819"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any8"], ["name", "any8"], ["created_at", "2022-07-19 19:48:36.124956"], ["updated_at", "2022-07-19 19:48:36.124956"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any9"], ["name", "any9"], ["created_at", "2022-07-19 19:48:36.125891"], ["updated_at", "2022-07-19 19:48:36.125891"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.1ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any10"], ["name", "any10"], ["created_at", "2022-07-19 19:48:36.126812"], ["updated_at", "2022-07-19 19:48:36.126812"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mGituser Load (0.0ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "any1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.8ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.129969"], ["updated_at", "2022-07-19 19:48:36.129969"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mGituser Load (0.1ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Update (0.1ms)[0m  [1m[33mUPDATE "gitusers" SET "name" = ?, "updated_at" = ? WHERE "gitusers"."id" = ?[0m  [["name", "Vasya"], ["updated_at", "2022-07-19 19:48:36.132579"], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGituser Create (0.8ms)[0m  [1m[32mINSERT INTO "gitusers" ("log", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["log", "any"], ["name", "any"], ["created_at", "2022-07-19 19:48:36.134989"], ["updated_at", "2022-07-19 19:48:36.134989"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mGituser Load (0.0ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/gitusers" for 127.0.0.1 at 2022-07-19 22:48:36 +0300
+Processing by GitusersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gitusers/index.html.erb within layouts/application
+  Rendered gitusers/index.html.erb within layouts/application (Duration: 17.9ms | Allocations: 2432)
+  Rendered layout layouts/application.html.erb (Duration: 77.4ms | Allocations: 24553)
+Completed 200 OK in 108ms (Views: 88.2ms | ActiveRecord: 0.0ms | Allocations: 27708)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/gitusers" for 127.0.0.1 at 2022-07-19 22:48:36 +0300
+Processing by GitusersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gitusers/index.html.erb within layouts/application
+  Rendered gitusers/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 480)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1137)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 1454)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started POST "/gitusers" for 127.0.0.1 at 2022-07-19 22:48:36 +0300
+Processing by GitusersController#create as HTML
+  Parameters: {"gituser"=>{"log"=>"Hauxenbro"}}
+  [1m[36mGituser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  [1m[36mCACHE Gituser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+  [1m[36mGituser Load (0.1ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" WHERE "gitusers"."log" = ? LIMIT ?[0m  [["log", "Hauxenbro"], ["LIMIT", 1]]
+Redirected to http://www.example.com/gitusers
+Completed 302 Found in 4532ms (ActiveRecord: 0.5ms | Allocations: 14281)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGituser Load (0.2ms)[0m  [1m[34mSELECT "gitusers".* FROM "gitusers" ORDER BY "gitusers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/gitusers.38" for 127.0.0.1 at 2022-07-19 22:48:40 +0300
+Processing by GitusersController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering gitusers/index.html.erb within layouts/application
+  Rendered gitusers/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 475)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1132)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 1520)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
