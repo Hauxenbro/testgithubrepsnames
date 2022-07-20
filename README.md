@@ -22,9 +22,9 @@ How to use it:
 
 Tests:
 
-cd testgithubrepsnames
-rspec spec # full testing
-rspec spec/models/gituser_spec.rb # tests only for gituser model
-rspec spec/models/gitrep_spec.rb # tests only for gitrep model
-rspec spec/requests/gitusers_controller_spec.rb # tests only for gitusers controller
+- cd testgithubrepsnames
+- rspec spec # full testing
+- rspec spec/models/gituser_spec.rb # tests only for gituser model
+- rspec spec/models/gitrep_spec.rb # tests only for gitrep model
+- rspec spec/requests/gitusers_controller_spec.rb # tests only for gitusers controller
 
